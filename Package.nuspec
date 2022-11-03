@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>x-editable</id>
-    <version>1.5.5</version>
+    <version>1.5.6</version>
     <authors>Vitaliy Potapov</authors>
     <owners>Vitaliy Potapov</owners>
     <licenseUrl>https://github.com/haught/x-editable-bs4/blob/master/LICENSE-MIT</licenseUrl>
@@ -17,7 +17,7 @@
   </metadata>
   <files>
     <file src="dist\*" target="\" />
-	<file src="dist\**\*.js" target="content\Scripts" />
-	<file src="dist\**" target="content\Content" exclude="**\*.js;**\*.txt;**\*.md;**\*-MIT" />	
-  </files>  
+  <file src="dist\**\*.js" target="content\Scripts" />
+  <file src="dist\**" target="content\Content" exclude="**\*.js;**\*.txt;**\*.md;**\*-MIT" />
+  </files>
 </package>

@@ -131,6 +131,30 @@ $(function(){
     });      
 
 
+    // Ajax based select2
+    $('#country2').editable({
+        url: '/post',
+        select2: {
+            ajax: {
+                url: '/countries',
+                dataType: 'json',
+                data: function (term) {
+                    return {
+                        search: term,
+                    };
+                },
+                results(remoteData, pageNumber) {
+                    return remoteData;
+                }
+            },
+            width: 200,
+            theme: 'bootstrap4',
+            minimumInputLength: 0,
+            placeholder: 'Select country',
+            allowClear: true,
+        } 
+    });
+
     
     $('#address').editable({
         url: '/post',

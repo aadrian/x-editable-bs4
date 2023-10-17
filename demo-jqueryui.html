@@ -60,8 +60,10 @@
                         $(this).attr('action', 'demo-plain.html');
                     } else if(f === 'bootstrap2') {
                         $(this).attr('action', 'demo.html');
-                    } else {
+                    } else if(f === 'bootstrap3') {
                         $(this).attr('action', 'demo-bs3.html');                        
+                    } else {
+                        $(this).attr('action', 'demo-bs4.html');
                     }
                 });
             });
@@ -93,6 +95,7 @@
                 <label>
                     <span>Form style:</span>
                     <select id="f" class="form-control">
+                        <option value="bootstrap4">Bootstrap 4</option>
                         <option value="bootstrap3">Bootstrap 3</option>
                         <option value="bootstrap2">Bootstrap 2</option>
                         <option value="jqueryui">jQuery UI</option>

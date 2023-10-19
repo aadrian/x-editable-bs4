@@ -361,9 +361,9 @@ $(function(){
 
             // For ajax mode, get data from select2            
             const dataArray = this.$input.select2('data');
+            const $el = $(this.options.scope);
             if(dataArray && dataArray.length > 0) {
                 if(dataArray.length == 1) {
-                    const $el = $(this.options.scope);
                     $el.html(dataArray[0].text);
                     return dataArray[0].id;
                 } else {
@@ -372,12 +372,12 @@ $(function(){
                         value.push(data.id);
                         text.push(data.text);
                     });
-                    const $el = $(this.options.scope);
                     $el.html(text.join(','));
                     return value.join(',');
                 }
             } else {
-                return Constructor.superclass.input2value.apply(this, arguments);
+                $el.html('');
+                return '';
             }
         },
 

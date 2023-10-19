@@ -138,21 +138,18 @@ $(function(){
             ajax: {
                 url: '/countries',
                 dataType: 'json',
-                data: function (term) {
+                data: function (params) {
                     return {
-                        search: term,
+                        search: params.term,
                     };
                 },
-                results(remoteData, pageNumber) {
-                    return remoteData;
-                }
             },
-            width: 200,
+            width: 400,
             theme: 'bootstrap4',
             minimumInputLength: 0,
             placeholder: 'Select country',
             allowClear: true,
-        } 
+        },
     });
 
     

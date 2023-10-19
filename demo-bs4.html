@@ -10,7 +10,7 @@
 
         <title>X-editable Demo</title>
 
-        <script src="assets/jquery/jquery-1.9.1.min.js"></script>  
+        <script src="assets/jquery/jquery-1.12.4.min.js"></script>
         <script src="assets/mockjax/jquery.mockjax.js"></script>
 
         <!-- Font-Awesome 6.4.2-->
@@ -82,7 +82,7 @@
                 $('#f').val(f);
                 $('#c').val(c);
                 
-                $('#frm').submit(function(){
+                $('#frm').on('submit', function(){
                     var f = $('#f').val();
                     if(f === 'jqueryui') {
                         $(this).attr('action', 'demo-jqueryui.html');

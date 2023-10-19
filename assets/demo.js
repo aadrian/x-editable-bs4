@@ -4,7 +4,7 @@ $(function(){
    $.fn.editable.defaults.url = '/post'; 
 
     //enable / disable
-   $('#enable').click(function() {
+   $('#enable').on('click', function() {
        $('#user .editable').editable('toggleDisabled');
    });    
     
@@ -19,7 +19,7 @@ $(function(){
     
     $('#firstname').editable({
         validate: function(value) {
-           if($.trim(value) == '') return 'This field is required';
+           if(value && value.trim() == '') return 'This field is required';
         }
     });
     
@@ -79,7 +79,7 @@ $(function(){
     }); 
     
     $('#note').editable(); 
-    $('#pencil').click(function(e) {
+    $('#pencil').on('click', function(e) {
         e.stopPropagation();
         e.preventDefault();
         $('#note').editable('toggle');

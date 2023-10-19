@@ -11,6 +11,10 @@ To make it **bootstrap-styled** you can use css from [here](https://github.com/f
 
     <link href="select2-bootstrap.css" rel="stylesheet" type="text/css"></link>
 
+For **bootstrap4 theme** you can use css from [here](https://github.com/ttskch/select2-bootstrap4-theme):  
+
+    <link href="select2-bootstrap4.css" rel="stylesheet" type="text/css"></link>
+
 **Note:** currently `autotext` feature does not work for select2 with `ajax` remote source.
 You need initially put both `data-value` and element's text youself:
 
@@ -255,6 +259,12 @@ $(function(){
         * Superclass doesn't support multiple selects, so we need to override this.
         */
        value2htmlFinal: function (value, element) {
+
+            // For ajax mode - Do nothing, since the value is already set from 'input2value'
+            if(this.options.select2.ajax) {
+                return;
+            }
+
            // The select input type can handle single selects fine
            // We have to special case multiple selects, which aren't supported
            // by default.
@@ -341,6 +351,35 @@ $(function(){
            // After setting the value we must trigger the change event for Select2
            this.$input.val(value).trigger('change');
        },
+        
+       input2value: function () {
+
+            // For non-ajax mode, fallback to default implementation
+            if(!this.options.select2.ajax){
+                return Constructor.superclass.input2value.apply(this, arguments);
+            }
+
+            // For ajax mode, get data from select2            
+            const dataArray = this.$input.select2('data');
+            if(dataArray && dataArray.length > 0) {
+                if(dataArray.length == 1) {
+                    const $el = $(this.options.scope);
+                    $el.html(dataArray[0].text);
+                    return dataArray[0].id;
+                } else {
+                    var value = [], text = [];
+                    dataArray.forEach(function(data){
+                        value.push(data.id);
+                        text.push(data.text);
+                    });
+                    const $el = $(this.options.scope);
+                    $el.html(text.join(','));
+                    return value.join(',');
+                }
+            } else {
+                return Constructor.superclass.input2value.apply(this, arguments);
+            }
+        },
 
         autosubmit: function() {
             this.$input.on('change', function(e, isInitial){
@@ -415,6 +454,14 @@ $(function(){
     });
 
     Constructor.defaults = $.extend({}, $.fn.editabletypes.select.defaults, {
+        
+        /**
+         * Template
+        @property tpl 
+        @default <select></select>
+        **/
+        tpl: '<select></select>',
+
         /**
         Configuration of select2. [Full list of options](http://ivaynberg.github.com/select2).
 

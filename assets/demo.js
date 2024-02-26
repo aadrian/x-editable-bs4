@@ -52,7 +52,15 @@ $(function(){
             todayBtn: 'linked'
         } 
     });  
-        
+    
+    $('#dateOfBirth').editable({
+        format: "dd.mm.yyyy",
+        datepicker: {
+            clearBtn:true,
+            todayHighlight: true,
+        }
+    });
+
     $('#dob').editable();
           
     $('#event').editable({

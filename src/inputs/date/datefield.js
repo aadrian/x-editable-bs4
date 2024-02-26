@@ -24,23 +24,20 @@ Automatically shown in inline mode.
             this.setClass();
             this.setAttr('placeholder');
 
-            //bootstrap-datepicker is set `bdateicker` to exclude conflict with jQuery UI one. (in date.js)
-            this.$input.bdatepicker(this.options.datepicker);
-
             //need to disable original event handlers
             this.$input.off('focus keydown');
 
             //update value of datepicker
             this.$input.keyup($.proxy(function(){
                this.$tpl.removeData('date');
-               this.$tpl.bdatepicker('update');
+               this.$input.bdatepicker(this.options.datepicker);
             }, this));
 
         },
 
        value2input: function(value) {
            this.$input.val(value ? this.dpg.formatDate(value, this.parsedViewFormat, this.options.datepicker.language) : '');
-           this.$tpl.bdatepicker('update');
+           this.$input.bdatepicker(this.options.datepicker);
        },
 
        input2value: function() {
@@ -60,7 +57,7 @@ Automatically shown in inline mode.
         /**
         @property tpl
         **/
-        tpl:'<div class="input-append date"><input type="text"/><span class="add-on"><i class="icon-th"></i></span></div>',
+        tpl:'<div class="input-group date"><input type="text" class="form-control"/></div>',
         /**
         @property inputclass
         @default 'input-small'

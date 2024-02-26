@@ -22,7 +22,7 @@ function getFiles() {
                 inputs+'typeahead.js'
                 ], 
             css: [
-                inputs+'date/bootstrap-datepicker/css/datepicker.css'
+                inputs+'date/bootstrap-datepicker/css/bootstrap-datepicker.css'
                //don't build datetime lib, should be included manually
                //inputs+'datetime/bootstrap-datetimepicker/css/datetimepicker.css'
                 ]
@@ -43,7 +43,7 @@ function getFiles() {
                 //inputs+'typeahead.js'
                 ], 
             css: [
-                inputs+'date/bootstrap-datepicker/css/datepicker.css'
+                inputs+'date/bootstrap-datepicker/css/bootstrap-datepicker3.css'
                //don't build datetime lib, should be included manually
                //inputs+'datetime/bootstrap-datetimepicker/css/datetimepicker.css'
                 ]
@@ -64,7 +64,7 @@ function getFiles() {
                 //inputs+'typeahead.js'
                 ], 
             css: [
-                inputs+'date/bootstrap-datepicker/css/datepicker.css'
+                inputs+'date/bootstrap-datepicker/css/bootstrap-datepicker3.css'
                //don't build datetime lib, should be included manually
                //inputs+'datetime/bootstrap-datetimepicker/css/datetimepicker.css'
                 ]
@@ -85,7 +85,7 @@ function getFiles() {
                 //inputs+'typeahead.js'
                 ], 
             css: [
-                inputs+'date/bootstrap-datepicker/css/datepicker.css'
+                inputs+'date/bootstrap-datepicker/css/bootstrap-datepicker3.css'
                //don't build datetime lib, should be included manually
                //inputs+'datetime/bootstrap-datetimepicker/css/datetimepicker.css'
                 ]

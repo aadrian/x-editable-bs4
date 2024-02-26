@@ -1,6 +1,10 @@
 X-editable changelog
 =============================
 
+Version 1.7.0 Feb 26, 2024
+----------------------------
+Add support for Bootstrap Datepicker v1.9.0
+
 Version 1.6.0 Oct 19, 2023
 ----------------------------
 Add support for Select2 v4.0.12

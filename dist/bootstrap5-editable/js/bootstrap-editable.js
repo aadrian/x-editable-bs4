@@ -1,4 +1,4 @@
-/*! x-editable-bs4 - v1.7.0 
+/*! x-editable-bs4 - v1.7.1 
 * In-place editing with Twitter Bootstrap, jQuery UI or pure jQuery
 * https://github.com/haught/x-editable-bs4
 * Copyright (c) 2024 Vitaliy Potapov; Licensed MIT */
@@ -6900,6 +6900,11 @@ $(function(){
 
 }));
 
+!function(a){a.fn.datepicker.dates.de={days:["Sonntag","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag"],daysShort:["Son","Mon","Die","Mit","Don","Fre","Sam"],daysMin:["So","Mo","Di","Mi","Do","Fr","Sa"],months:["Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"],monthsShort:["Jan","Feb","Mär","Apr","Mai","Jun","Jul","Aug","Sep","Okt","Nov","Dez"],today:"Heute",monthsTitle:"Monate",clear:"Löschen",weekStart:1,format:"dd.mm.yyyy"}}(jQuery);
+!function(a){a.fn.datepicker.dates.es={days:["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"],daysShort:["Dom","Lun","Mar","Mié","Jue","Vie","Sáb"],daysMin:["Do","Lu","Ma","Mi","Ju","Vi","Sa"],months:["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"],monthsShort:["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sep","Oct","Nov","Dic"],today:"Hoy",monthsTitle:"Meses",clear:"Borrar",weekStart:1,format:"dd/mm/yyyy"}}(jQuery);
+!function(a){a.fn.datepicker.dates.fr={days:["dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"],daysShort:["dim.","lun.","mar.","mer.","jeu.","ven.","sam."],daysMin:["d","l","ma","me","j","v","s"],months:["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"],monthsShort:["janv.","févr.","mars","avril","mai","juin","juil.","août","sept.","oct.","nov.","déc."],today:"Aujourd'hui",monthsTitle:"Mois",clear:"Effacer",weekStart:1,format:"dd/mm/yyyy"}}(jQuery);
+!function(a){a.fn.datepicker.dates.it={days:["Domenica","Lunedì","Martedì","Mercoledì","Giovedì","Venerdì","Sabato"],daysShort:["Dom","Lun","Mar","Mer","Gio","Ven","Sab"],daysMin:["Do","Lu","Ma","Me","Gi","Ve","Sa"],months:["Gennaio","Febbraio","Marzo","Aprile","Maggio","Giugno","Luglio","Agosto","Settembre","Ottobre","Novembre","Dicembre"],monthsShort:["Gen","Feb","Mar","Apr","Mag","Giu","Lug","Ago","Set","Ott","Nov","Dic"],today:"Oggi",monthsTitle:"Mesi",clear:"Cancella",weekStart:1,format:"dd/mm/yyyy"}}(jQuery);
+!function(a){a.fn.datepicker.dates["en-GB"]={days:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],daysShort:["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],daysMin:["Su","Mo","Tu","We","Th","Fr","Sa"],months:["January","February","March","April","May","June","July","August","September","October","November","December"],monthsShort:["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],today:"Today",monthsTitle:"Months",clear:"Clear",weekStart:1,format:"dd/mm/yyyy"}}(jQuery);
 /**
 Bootstrap-datepicker.  
 Description and examples: https://github.com/eternicode/bootstrap-datepicker.  

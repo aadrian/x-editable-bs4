@@ -1,6 +1,10 @@
 X-editable changelog
 =============================
 
+Version 1.7.1 Apr 18, 2024
+----------------------------
+Enabled i18n support for bootstrap-datepicker for languages: German, French, Italian and Spanish
+
 Version 1.7.0 Feb 26, 2024
 ----------------------------
 Add support for Bootstrap Datepicker v1.9.0

@@ -58,6 +58,7 @@ $(function(){
         datepicker: {
             clearBtn:true,
             todayHighlight: true,
+            language: 'de', // Supported languages: de, en, es, fr, it
         }
     });
 

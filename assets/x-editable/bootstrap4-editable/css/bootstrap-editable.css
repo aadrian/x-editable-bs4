@@ -1,4 +1,4 @@
-/*! x-editable-bs4 - v1.7.0 
+/*! x-editable-bs4 - v1.7.1 
 * In-place editing with Twitter Bootstrap, jQuery UI or pure jQuery
 * https://github.com/haught/x-editable-bs4
 * Copyright (c) 2024 Vitaliy Potapov; Licensed MIT */
